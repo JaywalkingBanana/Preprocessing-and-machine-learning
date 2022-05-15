@@ -20,6 +20,16 @@ img = Image.fromarray(data, 'RGB')
 img.save('my_image.png')
 img.show()
 
+#resize image
+from PIL import Image
+
+basewidth = 30
+img = Image.open('my.png')
+wpercent = (basewidth/float(img.size[0]))
+hsize = int((float(img.size[1])*float(wpercent)))
+img = img.resize((basewidth,hsize), Image.ANTIALIAS)
+img.save('rescaled.jpg', 'JPEG')
+
 #define matrix, vector
 x = tf.constant([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]])
 y = tf.constant([[1.],[2.],[3.]])
