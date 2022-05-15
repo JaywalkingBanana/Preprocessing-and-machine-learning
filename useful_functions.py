@@ -20,6 +20,9 @@ img = Image.fromarray(data, 'RGB')
 img.save('my_image.png')
 img.show()
 
+#crop image
+img = Image.fromarray(data[a:b][c:d][:], 'RGB')
+
 #resize image
 from PIL import Image
 
