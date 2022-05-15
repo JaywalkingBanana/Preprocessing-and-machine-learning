@@ -2,7 +2,7 @@
 from IPython.display import display, Image
 display(Image(filename='download.jpeg'))
 
-#get image to matrix
+#image to matrix
 import matplotlib.image as image
 data=image.imread('download.jpeg')
 print('The Shape of the image is:',data.shape)
