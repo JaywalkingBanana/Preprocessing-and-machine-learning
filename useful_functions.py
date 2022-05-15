@@ -37,3 +37,19 @@ print(videodata.shape)
 
 # frame/height/width/RGB
 videodata[][][][]
+
+#read and save audio file
+from scipy.io.wavfile import write
+import audio2numpy as a2n
+x,sr=a2n.audio_from_file("file.mp3")
+write("example.wav", sr, x)
+
+#pip install audio2numpy
+
+#create sine wave
+from scipy.io.wavfile import write
+samplerate = 44100; fs = 100
+t = np.linspace(0., 1., samplerate)
+amplitude = np.iinfo(np.int16).max
+data = amplitude * np.sin(2. * np.pi * fs * t)
+write("example.wav", samplerate, data.astype(np.int16))
