@@ -27,9 +27,13 @@ y = tf.constant([[1.],[2.],[3.]])
 #multiplication
 z = tf.matmul(x, y)
 
+#sudo pip3 install sk-video
+#sudo apt-get install ffmpeg
+
 #video to matrix
 import skvideo.io  
 videodata = skvideo.io.vread("my_video.mp4")  
 print(videodata.shape)
+
 # frame/height/width/RGB
 videodata[][][][]
